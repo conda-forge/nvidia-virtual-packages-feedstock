@@ -1,5 +1,5 @@
 context:
-  version: "0.2.0"
+  version: "0.2.1"
 
 package:
   name: nvidia-virtual-packages
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda-incubator/nvidia-virtual-packages/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 0156728d85866d011c6634e93411c095368a015786a61e914a935f541cecd506
+  sha256: 47021f54ac0860f0e34d9b1aab3dd66cbf8aaece03ed23a49a28f6aad4a68216
 
 build:
   script: python -m pip install . -vv
@@ -29,8 +29,8 @@ tests:
         - nvidia_virtual_packages
       pip_check: true
       python_version:
-         - ${{ python_min }}.*
-         - "*"
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/conda-incubator/nvidia-virtual-packages
